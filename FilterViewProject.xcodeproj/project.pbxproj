@@ -28,6 +28,13 @@
 		D3B1F0B4286466790082E652 /* IsHiddenBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B3286466790082E652 /* IsHiddenBinding.swift */; };
 		D3B1F0B6286469060082E652 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B5286469060082E652 /* MainTabView.swift */; };
 		D3B1F0B82864696C0082E652 /* ResultListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B72864696C0082E652 /* ResultListView.swift */; };
+		D3ECE661286490430054117B /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE660286490430054117B /* CheckBoxStyle.swift */; };
+		D3ECE663286492C80054117B /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE662286492C80054117B /* CheckBox.swift */; };
+		D3ECE665286498940054117B /* TypeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE664286498940054117B /* TypeFilterView.swift */; };
+		D3ECE667286498E20054117B /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE666286498E20054117B /* TitleText.swift */; };
+		D3ECE66928649CD30054117B /* TrashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE66828649CD30054117B /* TrashButton.swift */; };
+		D3ECE66B28649EED0054117B /* TypeFilterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE66A28649EED0054117B /* TypeFilterGridView.swift */; };
+		D3ECE66E2864AB9C0054117B /* FilterItemModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE66D2864AB9C0054117B /* FilterItemModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,13 @@
 		D3B1F0B3286466790082E652 /* IsHiddenBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsHiddenBinding.swift; sourceTree = "<group>"; };
 		D3B1F0B5286469060082E652 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		D3B1F0B72864696C0082E652 /* ResultListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListView.swift; sourceTree = "<group>"; };
+		D3ECE660286490430054117B /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
+		D3ECE662286492C80054117B /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		D3ECE664286498940054117B /* TypeFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeFilterView.swift; sourceTree = "<group>"; };
+		D3ECE666286498E20054117B /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
+		D3ECE66828649CD30054117B /* TrashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashButton.swift; sourceTree = "<group>"; };
+		D3ECE66A28649EED0054117B /* TypeFilterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeFilterGridView.swift; sourceTree = "<group>"; };
+		D3ECE66D2864AB9C0054117B /* FilterItemModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +138,15 @@
 		D390E50D28644751002E657C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D390E50E2864477A002E657C /* PriceFilterView.swift */,
+				D3ECE66C2864A1B00054117B /* GridComponents */,
 				D390E51628644D9B002E657C /* NumberField.swift */,
 				D3B1F0AD286457640082E652 /* SelectFilterButton.swift */,
 				D3B1F0B128645CC10082E652 /* FilterButton.swift */,
+				D3ECE662286492C80054117B /* CheckBox.swift */,
+				D3ECE666286498E20054117B /* TitleText.swift */,
+				D3ECE66828649CD30054117B /* TrashButton.swift */,
+				D3ECE664286498940054117B /* TypeFilterView.swift */,
+				D390E50E2864477A002E657C /* PriceFilterView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -145,8 +164,18 @@
 			children = (
 				D390E51928644EC9002E657C /* UnderlineTextField.swift */,
 				D3B1F0B3286466790082E652 /* IsHiddenBinding.swift */,
+				D3ECE660286490430054117B /* CheckBoxStyle.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D3ECE66C2864A1B00054117B /* GridComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D3ECE66D2864AB9C0054117B /* FilterItemModifier.swift */,
+				D3ECE66A28649EED0054117B /* TypeFilterGridView.swift */,
+			);
+			path = GridComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,20 +258,27 @@
 				D3B1F0B028645A260082E652 /* FilterSelectionView.swift in Sources */,
 				D390E51528644827002E657C /* App+Injection.swift in Sources */,
 				D3B1F0B4286466790082E652 /* IsHiddenBinding.swift in Sources */,
+				D3ECE663286492C80054117B /* CheckBox.swift in Sources */,
 				D390E51A28644EC9002E657C /* UnderlineTextField.swift in Sources */,
 				D390E51728644D9B002E657C /* NumberField.swift in Sources */,
 				D3B1F0AE286457640082E652 /* SelectFilterButton.swift in Sources */,
+				D3ECE66928649CD30054117B /* TrashButton.swift in Sources */,
 				D390E50628642EEC002E657C /* AreaFilter.swift in Sources */,
 				D3B1F0B228645CC10082E652 /* FilterButton.swift in Sources */,
+				D3ECE661286490430054117B /* CheckBoxStyle.swift in Sources */,
+				D3ECE66E2864AB9C0054117B /* FilterItemModifier.swift in Sources */,
 				D3B1F0B6286469060082E652 /* MainTabView.swift in Sources */,
 				D390E50C28642F4A002E657C /* FilterViewModel.swift in Sources */,
 				D390E50428642ED9002E657C /* PriceFilter.swift in Sources */,
 				D390E50828642F08002E657C /* GroundAreaFilter.swift in Sources */,
+				D3ECE667286498E20054117B /* TitleText.swift in Sources */,
 				D3B1F0B82864696C0082E652 /* ResultListView.swift in Sources */,
 				D390E50F2864477A002E657C /* PriceFilterView.swift in Sources */,
 				D390E4F328642E7B002E657C /* FilterViewProjectApp.swift in Sources */,
 				D390E50A28642F1F002E657C /* GlobalFilter.swift in Sources */,
 				D390E50228642EC8002E657C /* TypeFilter.swift in Sources */,
+				D3ECE66B28649EED0054117B /* TypeFilterGridView.swift in Sources */,
+				D3ECE665286498940054117B /* TypeFilterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

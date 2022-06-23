@@ -14,8 +14,12 @@ struct FilterView: View {
     
     var body: some View {
         VStack(spacing: 30){
+            
             PriceFilterView()
                 .isHidden(!filterViewModel.globalFilter.priceFilter.isSelected)
+            
+            TypeFilterGridView()
+//                .isHidden(!filterViewModel.globalFilter.typeFilter.isSelected)
             
             SelectFilterButton(imageString: "slider.horizontal.3", buttonTitle: "Ajouter un filtre") {
                 filterViewModel.selectFilterSheetisPresented.toggle()

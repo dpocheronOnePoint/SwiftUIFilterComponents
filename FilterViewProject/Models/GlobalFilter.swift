@@ -22,5 +22,5 @@ extension GlobalFilter {
         groundAreaFilter: GroundAreaFilter.unselectedGroundAreaFilter
     )
 
-    static let testGlobalFilter = GlobalFilter(typeFilter: TypeFilter(selectedtype: .appartmentOnly, isSelected: true), priceFilter: PriceFilter.unselectedPriceFilter, areaFilter: AreaFilter.unselectedAreaFilter, groundAreaFilter: GroundAreaFilter.unselectedGroundAreaFilter)
+    static let testGlobalFilter = GlobalFilter(typeFilter: TypeFilter(isSelected: false, houseIsSelected: true, appartmentIsSelected: true), priceFilter: PriceFilter.unselectedPriceFilter, areaFilter: AreaFilter.unselectedAreaFilter, groundAreaFilter: GroundAreaFilter.unselectedGroundAreaFilter)
 }

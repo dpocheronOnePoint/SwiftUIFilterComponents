@@ -23,14 +23,6 @@ class FilterViewModel: ObservableObject, FilterViewModelProtocol {
     @Published var globalFilter: GlobalFilter = GlobalFilter.unselectedGlobalFilter
     @Published var selectFilterSheetisPresented = false
     
-    
-    @Published var minPriceString: String = "" {
-        didSet {
-            globalFilter.priceFilter.minPrice = Int(minPriceString) ?? 0
-        }
-    }
-    @Published var maxPriceString: String = ""
-    
     init() {
         Task {
             try loadGlobalFilter()

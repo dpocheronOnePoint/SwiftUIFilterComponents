@@ -1,5 +1,5 @@
 //
-//  TypeFilterView.swift
+//  PriceFilterView.swift
 //  FilterViewProject
 //
 //  Created by Dimitri POCHERON on 23/06/2022.
@@ -33,20 +33,15 @@ struct PriceFilterView: View {
                 .padding(.horizontal, 20)
             } // VSTACK
             
-            Button {
+            TrashButton() {
                 filterViewModel.desactivateFilter(filterType: .priceFilter)
-            }label: {
-                Image(systemName: "trash")
-                    .padding(.trailing, 10)
-                    .foregroundColor(.primary)
-                    .imageScale(.large)
             }
         }
         .padding(.leading, 30)
     }
 }
 
-struct TypeFilterView_Previews: PreviewProvider {
+struct PriceFilterView_Previews: PreviewProvider {
     static var previews: some View {
         PriceFilterView()
     }
