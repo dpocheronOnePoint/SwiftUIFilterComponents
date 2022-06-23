@@ -7,15 +7,22 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FilterView: View {
+    @ObservedObject private var filterViewModel = FilterViewModel()
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onAppear {
+                Task {
+                    try filterViewModel.loadGlobalFilter()
+                }
+            }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FilterView()
     }
 }

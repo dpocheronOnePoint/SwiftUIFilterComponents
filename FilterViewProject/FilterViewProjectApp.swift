@@ -11,7 +11,7 @@ import SwiftUI
 struct FilterViewProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FilterView()
         }
     }
 }
