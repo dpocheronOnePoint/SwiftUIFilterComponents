@@ -26,6 +26,8 @@
 		D3B1F0B028645A260082E652 /* FilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0AF28645A260082E652 /* FilterSelectionView.swift */; };
 		D3B1F0B228645CC10082E652 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B128645CC10082E652 /* FilterButton.swift */; };
 		D3B1F0B4286466790082E652 /* IsHiddenBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B3286466790082E652 /* IsHiddenBinding.swift */; };
+		D3B1F0B6286469060082E652 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B5286469060082E652 /* MainTabView.swift */; };
+		D3B1F0B82864696C0082E652 /* ResultListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B72864696C0082E652 /* ResultListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		D3B1F0AF28645A260082E652 /* FilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionView.swift; sourceTree = "<group>"; };
 		D3B1F0B128645CC10082E652 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		D3B1F0B3286466790082E652 /* IsHiddenBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsHiddenBinding.swift; sourceTree = "<group>"; };
+		D3B1F0B5286469060082E652 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		D3B1F0B72864696C0082E652 /* ResultListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				D390E50028642EBB002E657C /* Models */,
 				D390E50D28644751002E657C /* Components */,
 				D390E51828644EAE002E657C /* Utils */,
+				D3B1F0B5286469060082E652 /* MainTabView.swift */,
+				D3B1F0B72864696C0082E652 /* ResultListView.swift */,
 				D390E50B28642F4A002E657C /* FilterViewModel.swift */,
 				D390E4F428642E7B002E657C /* FilterView.swift */,
 				D3B1F0AF28645A260082E652 /* FilterSelectionView.swift */,
@@ -228,9 +234,11 @@
 				D3B1F0AE286457640082E652 /* SelectFilterButton.swift in Sources */,
 				D390E50628642EEC002E657C /* AreaFilter.swift in Sources */,
 				D3B1F0B228645CC10082E652 /* FilterButton.swift in Sources */,
+				D3B1F0B6286469060082E652 /* MainTabView.swift in Sources */,
 				D390E50C28642F4A002E657C /* FilterViewModel.swift in Sources */,
 				D390E50428642ED9002E657C /* PriceFilter.swift in Sources */,
 				D390E50828642F08002E657C /* GroundAreaFilter.swift in Sources */,
+				D3B1F0B82864696C0082E652 /* ResultListView.swift in Sources */,
 				D390E50F2864477A002E657C /* PriceFilterView.swift in Sources */,
 				D390E4F328642E7B002E657C /* FilterViewProjectApp.swift in Sources */,
 				D390E50A28642F1F002E657C /* GlobalFilter.swift in Sources */,

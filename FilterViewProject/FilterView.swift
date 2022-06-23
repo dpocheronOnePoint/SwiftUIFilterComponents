@@ -26,6 +26,11 @@ struct FilterView: View {
                 .presentationDetents([.large, .medium])
                 .ignoresSafeArea(.all, edges: .bottom)
         }
+        .onDisappear {
+            Task {
+                try filterViewModel.registerGlobalFilter()
+            }
+        }
     }
 }
 

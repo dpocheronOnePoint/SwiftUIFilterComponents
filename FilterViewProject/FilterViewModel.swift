@@ -14,6 +14,7 @@ enum FilterType {
 
 protocol FilterViewModelProtocol {
     func loadGlobalFilter() throws
+    func registerGlobalFilter() throws
     func activateFilter(filterType: FilterType)
     func desactivateFilter(filterType: FilterType)
 }
@@ -31,17 +32,22 @@ class FilterViewModel: ObservableObject, FilterViewModelProtocol {
     @Published var minPriceString: String = ""
     @Published var maxPriceString: String = ""
     
-    //        let defaults = UserDefaults.standard
-    //        let globalFilter = GlobalFilter.testGlobalFilter
-    //        let encodedGlobalFilter = try NSKeyedArchiver.archivedData(withRootObject: globalFilter, requiringSecureCoding: false)
-    //        defaults.set(encodedGlobalFilter, forKey: "GlobalFilter")
+    init() {
+        Task {
+            try loadGlobalFilter()
+        }
+    }
     
     func loadGlobalFilter() throws {
-        guard let decoded  = UserDefaults.standard.object(forKey: "GlobalFilter") as? Data else {
+        guard let data = UserDefaults.standard.value(forKey: "GlobalFilter") as? Data else {
             return
         }
-        let decodedGlobalFilter = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as! GlobalFilter
-        globalFilter = decodedGlobalFilter
+        globalFilter = try PropertyListDecoder().decode(GlobalFilter.self, from: data)
+    }
+    
+    func registerGlobalFilter() throws {
+        let defaults = UserDefaults.standard
+        defaults.set(try? PropertyListEncoder().encode(globalFilter), forKey: "GlobalFilter")
     }
     
     func activateFilter(filterType: FilterType) {

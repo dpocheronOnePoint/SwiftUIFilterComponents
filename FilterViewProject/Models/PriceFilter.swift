@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PriceFilter {
+struct PriceFilter: Codable {
     var minPrice: Int
     var maxPrice: Int
     var isSelected: Bool

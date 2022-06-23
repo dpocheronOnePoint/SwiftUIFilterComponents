@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AreaFilter {
+struct AreaFilter: Codable {
     var minArea: Int
     var maxArea: Int
     var isSelected: Bool

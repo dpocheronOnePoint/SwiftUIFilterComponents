@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum RealEstateFilterType {
+enum RealEstateFilterType: Codable {
     case homeOnly, appartmentOnly, all
 }
 
-struct TypeFilter {
+struct TypeFilter: Codable {
     var selectedtype: RealEstateFilterType
     var isSelected: Bool
 }

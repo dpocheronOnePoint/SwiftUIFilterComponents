@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GlobalFilter {
+struct GlobalFilter: Codable {
     var typeFilter: TypeFilter
     var priceFilter: PriceFilter
     var areaFilter: AreaFilter
