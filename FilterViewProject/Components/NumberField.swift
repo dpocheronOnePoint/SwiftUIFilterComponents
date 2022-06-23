@@ -10,13 +10,13 @@ import SwiftUI
 struct NumberField: View {
     let placeholder: String
     
-    @Binding var text: String
+    @Binding var number: Int
     
     var editingChangeAction: (() -> Void)?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
-            TextField(placeholder, text: $text, onEditingChanged: { editingChanged in
+            TextField(placeholder, value: $number, formatter: NumberFormatter(), onEditingChanged: { editingChanged in
                 if(editingChanged) {
                     if(editingChangeAction != nil) {
                         editingChangeAction!()

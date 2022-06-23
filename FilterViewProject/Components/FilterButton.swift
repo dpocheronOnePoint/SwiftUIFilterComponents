@@ -28,7 +28,8 @@ struct FilterButton: View {
                     .imageScale(.large)
             } //: HSTACK
         })
-        .buttonStyle(.bordered)
+        .buttonStyle(.borderedProminent)
+        .controlSize(.large)
     }
 }
 

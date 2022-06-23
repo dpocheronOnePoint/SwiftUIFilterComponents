@@ -12,15 +12,29 @@ struct FilterSelectionView: View {
     @InjectedObject private var filterViewModel: FilterViewModel
     
     var body: some View {
-        VStack(spacing: 20) {
-            FilterButton(imageString: "eurosign.square", buttonTitle: "Filtrer par prix") {
-                
-                filterViewModel.activateFilter(filterType: .priceFilter)
+        VStack(spacing: 30) {
+            
+            // MARK: - Type Filter
+            if(!filterViewModel.globalFilter.typeFilter.isSelected) {
+                FilterButton(
+                    imageString: "house.fill",
+                    buttonTitle: "Filtrer par type") {
+                    filterViewModel.activateFilter(filterType: .typeFilter)
+                }
+            }
+            
+            // MARK: - PriceFilter
+            if(!filterViewModel.globalFilter.priceFilter.isSelected) {
+                FilterButton(
+                    imageString: "eurosign.square",
+                    buttonTitle: "Filtrer par prix") {
+                    filterViewModel.activateFilter(filterType: .priceFilter)
+                }
             }
             
             Spacer()
         }
-        .padding(.top, 20)
+        .padding(.top, 50)
     }
 }
 

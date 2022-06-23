@@ -20,7 +20,7 @@ struct PriceFilterView: View {
                     .fontWeight(.semibold)
                 
                 HStack(alignment: .bottom, spacing: 20) {
-                    NumberField(placeholder: "Prix min", text: $filterViewModel.minPriceString)
+                    NumberField(placeholder: "Prix min", number: $filterViewModel.globalFilter.priceFilter.minPrice)
                     
                     Text("à")
                         .foregroundColor(.accentColor)
@@ -28,15 +28,19 @@ struct PriceFilterView: View {
                         .fontWeight(.semibold)
                         .padding(.vertical, 5)
                     
-                    NumberField(placeholder: "Prix max", text: $filterViewModel.maxPriceString)
+                    NumberField(placeholder: "Prix max", number: $filterViewModel.globalFilter.priceFilter.maxPrice)
                 }
                 .padding(.horizontal, 20)
             } // VSTACK
             
-            Image(systemName: "trash")
-                .padding(.trailing, 10)
-                .foregroundColor(.primary)
-                .imageScale(.large)
+            Button {
+                filterViewModel.desactivateFilter(filterType: .priceFilter)
+            }label: {
+                Image(systemName: "trash")
+                    .padding(.trailing, 10)
+                    .foregroundColor(.primary)
+                    .imageScale(.large)
+            }
         }
         .padding(.leading, 30)
     }

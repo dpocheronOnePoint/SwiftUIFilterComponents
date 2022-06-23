@@ -23,13 +23,12 @@ class FilterViewModel: ObservableObject, FilterViewModelProtocol {
     @Published var globalFilter: GlobalFilter = GlobalFilter.unselectedGlobalFilter
     @Published var selectFilterSheetisPresented = false
     
-    // TypeFilter
-    @Published var typeFilterIsSelected: Bool = false
-    @Published var typeSelected: RealEstateFilterType = .all
     
-    // PriceFilter
-    @Published var priceFilterIsSelected: Bool = false
-    @Published var minPriceString: String = ""
+    @Published var minPriceString: String = "" {
+        didSet {
+            globalFilter.priceFilter.minPrice = Int(minPriceString) ?? 0
+        }
+    }
     @Published var maxPriceString: String = ""
     
     init() {
@@ -65,12 +64,14 @@ class FilterViewModel: ObservableObject, FilterViewModelProtocol {
     
     func desactivateFilter(filterType: FilterType) {
         selectFilterSheetisPresented = false
-        
-        switch filterType {
-        case .typeFilter:
-            globalFilter.typeFilter = TypeFilter.unselectedTypeFilter
-        case .priceFilter:
-            globalFilter.priceFilter = PriceFilter.unselectedPriceFilter
+       
+        withAnimation(.easeOut(duration: 0.5)){
+            switch filterType {
+            case .typeFilter:
+                globalFilter.typeFilter = TypeFilter.unselectedTypeFilter
+            case .priceFilter:
+                globalFilter.priceFilter = PriceFilter.unselectedPriceFilter
+            }
         }
     }
     
