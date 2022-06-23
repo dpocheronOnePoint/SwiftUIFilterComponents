@@ -17,6 +17,15 @@
 		D390E50828642F08002E657C /* GroundAreaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390E50728642F08002E657C /* GroundAreaFilter.swift */; };
 		D390E50A28642F1F002E657C /* GlobalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390E50928642F1F002E657C /* GlobalFilter.swift */; };
 		D390E50C28642F4A002E657C /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390E50B28642F4A002E657C /* FilterViewModel.swift */; };
+		D390E50F2864477A002E657C /* PriceFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390E50E2864477A002E657C /* PriceFilterView.swift */; };
+		D390E5122864479A002E657C /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = D390E5112864479A002E657C /* Resolver */; };
+		D390E51528644827002E657C /* App+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390E51428644827002E657C /* App+Injection.swift */; };
+		D390E51728644D9B002E657C /* NumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390E51628644D9B002E657C /* NumberField.swift */; };
+		D390E51A28644EC9002E657C /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390E51928644EC9002E657C /* UnderlineTextField.swift */; };
+		D3B1F0AE286457640082E652 /* SelectFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0AD286457640082E652 /* SelectFilterButton.swift */; };
+		D3B1F0B028645A260082E652 /* FilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0AF28645A260082E652 /* FilterSelectionView.swift */; };
+		D3B1F0B228645CC10082E652 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B128645CC10082E652 /* FilterButton.swift */; };
+		D3B1F0B4286466790082E652 /* IsHiddenBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1F0B3286466790082E652 /* IsHiddenBinding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +40,14 @@
 		D390E50728642F08002E657C /* GroundAreaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundAreaFilter.swift; sourceTree = "<group>"; };
 		D390E50928642F1F002E657C /* GlobalFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFilter.swift; sourceTree = "<group>"; };
 		D390E50B28642F4A002E657C /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		D390E50E2864477A002E657C /* PriceFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFilterView.swift; sourceTree = "<group>"; };
+		D390E51428644827002E657C /* App+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Injection.swift"; sourceTree = "<group>"; };
+		D390E51628644D9B002E657C /* NumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
+		D390E51928644EC9002E657C /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		D3B1F0AD286457640082E652 /* SelectFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterButton.swift; sourceTree = "<group>"; };
+		D3B1F0AF28645A260082E652 /* FilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionView.swift; sourceTree = "<group>"; };
+		D3B1F0B128645CC10082E652 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		D3B1F0B3286466790082E652 /* IsHiddenBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsHiddenBinding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D390E5122864479A002E657C /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,9 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				D390E4F228642E7B002E657C /* FilterViewProjectApp.swift */,
+				D390E513286447AE002E657C /* Injection */,
 				D390E50028642EBB002E657C /* Models */,
+				D390E50D28644751002E657C /* Components */,
+				D390E51828644EAE002E657C /* Utils */,
 				D390E50B28642F4A002E657C /* FilterViewModel.swift */,
 				D390E4F428642E7B002E657C /* FilterView.swift */,
+				D3B1F0AF28645A260082E652 /* FilterSelectionView.swift */,
 				D390E4F628642E7B002E657C /* Assets.xcassets */,
 				D390E4F828642E7B002E657C /* Preview Content */,
 			);
@@ -93,6 +115,34 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D390E50D28644751002E657C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D390E50E2864477A002E657C /* PriceFilterView.swift */,
+				D390E51628644D9B002E657C /* NumberField.swift */,
+				D3B1F0AD286457640082E652 /* SelectFilterButton.swift */,
+				D3B1F0B128645CC10082E652 /* FilterButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D390E513286447AE002E657C /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				D390E51428644827002E657C /* App+Injection.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		D390E51828644EAE002E657C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D390E51928644EC9002E657C /* UnderlineTextField.swift */,
+				D3B1F0B3286466790082E652 /* IsHiddenBinding.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +159,9 @@
 			dependencies = (
 			);
 			name = FilterViewProject;
+			packageProductDependencies = (
+				D390E5112864479A002E657C /* Resolver */,
+			);
 			productName = FilterViewProject;
 			productReference = D390E4EF28642E7B002E657C /* FilterViewProject.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +190,9 @@
 				Base,
 			);
 			mainGroup = D390E4E628642E7B002E657C;
+			packageReferences = (
+				D390E5102864479A002E657C /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = D390E4F028642E7B002E657C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,10 +220,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D390E4F528642E7B002E657C /* FilterView.swift in Sources */,
+				D3B1F0B028645A260082E652 /* FilterSelectionView.swift in Sources */,
+				D390E51528644827002E657C /* App+Injection.swift in Sources */,
+				D3B1F0B4286466790082E652 /* IsHiddenBinding.swift in Sources */,
+				D390E51A28644EC9002E657C /* UnderlineTextField.swift in Sources */,
+				D390E51728644D9B002E657C /* NumberField.swift in Sources */,
+				D3B1F0AE286457640082E652 /* SelectFilterButton.swift in Sources */,
 				D390E50628642EEC002E657C /* AreaFilter.swift in Sources */,
+				D3B1F0B228645CC10082E652 /* FilterButton.swift in Sources */,
 				D390E50C28642F4A002E657C /* FilterViewModel.swift in Sources */,
 				D390E50428642ED9002E657C /* PriceFilter.swift in Sources */,
 				D390E50828642F08002E657C /* GroundAreaFilter.swift in Sources */,
+				D390E50F2864477A002E657C /* PriceFilterView.swift in Sources */,
 				D390E4F328642E7B002E657C /* FilterViewProjectApp.swift in Sources */,
 				D390E50A28642F1F002E657C /* GlobalFilter.swift in Sources */,
 				D390E50228642EC8002E657C /* TypeFilter.swift in Sources */,
@@ -307,6 +371,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,6 +401,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,6 +437,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D390E5102864479A002E657C /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D390E5112864479A002E657C /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D390E5102864479A002E657C /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D390E4E728642E7B002E657C /* Project object */;
 }

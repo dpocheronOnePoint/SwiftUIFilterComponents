@@ -6,18 +6,26 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct FilterView: View {
-    @ObservedObject private var filterViewModel = FilterViewModel()
+    @InjectedObject private var filterViewModel: FilterViewModel
+    
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-            .onAppear {
-                Task {
-                    try filterViewModel.loadGlobalFilter()
-                }
+        VStack(spacing: 30){
+            PriceFilterView()
+                .isHidden(!filterViewModel.globalFilter.priceFilter.isSelected)
+            
+            SelectFilterButton(imageString: "slider.horizontal.3", buttonTitle: "Ajouter un filtre") {
+                filterViewModel.selectFilterSheetisPresented.toggle()
             }
+        }
+        .sheet(isPresented: $filterViewModel.selectFilterSheetisPresented) {
+            FilterSelectionView()
+                .presentationDetents([.large, .medium])
+                .ignoresSafeArea(.all, edges: .bottom)
+        }
     }
 }
 
